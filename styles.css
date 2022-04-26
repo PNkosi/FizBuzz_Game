@@ -1,0 +1,349 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --mainGradient: linear-gradient(rgb(128, 0, 255), rgb(89, 0, 255));
+  --blue: rgb(98, 0, 255);
+  --boxShadow: 5px 5px 5px rgba(0, 0, 0, 0.262);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-image: var(--mainGradient);
+  color: var(--lightBG);
+  height: 100vh;
+}
+
+.container {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+}
+
+.game-btn {
+  color: lavender;
+  text-decoration: none;
+  background: rgb(98, 0, 255);
+  box-shadow: var(--boxShadow);
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.logo {
+  color: rgb(202, 146, 255);
+  position: relative;
+}
+.logo span {
+  color: lavender;
+}
+
+.logo #game {
+  color: rgb(238, 0, 255);
+  font-size: 1.2rem;
+  font-family: cursive;
+  position: absolute;
+  top: 35px;
+  right: 2px;
+}
+
+.logo .fizz {
+  background-color: hotpink;
+}
+
+.buzz {
+  background-color: deepskyblue;
+}
+
+.fizzbuzz {
+  background-color: var(--accentColor);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px;
+  background-color: lavender;
+}
+
+.input-field-area {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 10px;
+  background-color: lavender;
+}
+
+input {
+  height: 40px;
+  width: 100%;
+  margin-bottom: 40px;
+  border: none;
+  border-bottom: 2px solid #555;
+  outline: none;
+  font-size: 18px;
+  padding-left: 10px;
+  background-color: transparent;
+}
+
+.fizzBuzz-btn {
+  display: block;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background-color: rgb(98, 0, 255);
+  box-shadow: var(--boxShadow);
+  font-size: 24px;
+  color: lavender;
+  cursor: pointer;
+}
+
+.results-area {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  grid-gap: 10px;
+  margin-top: 20px;
+  height: 50vh;
+  overflow: scroll;
+  background-color: lavender;
+}
+
+@media screen and (min-width: 280px) {
+  .results-area {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .results-area {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 420px) {
+  .results-area {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (min-width: 720px) {
+  .results-area {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.result {
+  background-image: linear-gradient(
+    to right,
+    rgb(188, 120, 255),
+    rgb(155, 92, 255)
+  );
+  color: lavender;
+  text-align: center;
+  font-size: 24px;
+  padding: 10px;
+  border-radius: 5px;
+  height: 50px;
+  width: 100px;
+}
+
+.error-input {
+  color: var(--blue);
+  text-align: center;
+}
+.reset-result-area {
+  grid-template-columns: 1fr;
+}
+
+footer {
+  margin-top: 20px;
+  background-color: rebeccapurple;
+  color: lavender;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+
+footer a {
+  text-decoration: none;
+  color: rgb(214, 189, 255);
+}
+
+/* ---------------- FIZZ BUZZ GAME ----------- */
+.rules {
+  box-shadow: var(--boxShadow);
+  padding: 10px;
+  line-height: 1.5;
+  color: lavender;
+  border-radius: 5px;
+}
+
+.rules-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--blue);
+}
+
+.rules-list {
+  background-color: lavender;
+  color: #555;
+  padding: 10px;
+  margin-top: 5px;
+}
+.rules-list p {
+  padding: 5px 0;
+}
+
+.how-to-btn {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  background-image: var(--mainGradient);
+  color: var(--darkBG);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.toggle-rules {
+  display: none;
+}
+
+.display-area {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+    "current"
+    "previous";
+
+  margin: 20px 0;
+}
+
+.current {
+  grid-area: current;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--blue);
+  color: lavender;
+  border: 1px solid rgba(230, 230, 250, 0.301);
+}
+select {
+  height: 40px;
+  width: 50%;
+  background-color: transparent;
+  color: lavender;
+  border: none;
+  border-bottom: 2px solid lavender;
+  outline: none;
+  margin-bottom: 20px;
+}
+
+option {
+  color: #555;
+}
+
+.current > div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.random-number {
+  grid-area: random-number;
+  font-size: 7em;
+  text-align: center;
+}
+
+.display-result {
+  grid: result;
+  align-self: center;
+}
+
+.previous-box {
+  grid-area: previous;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--lightBG);
+  background-color: rebeccapurple;
+  color: lavender;
+  padding: 20px;
+}
+
+@media screen and (max-width: 420px) {
+  .previous-box {
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 1.5;
+  }
+}
+
+.options {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+.options > button {
+  height: unset;
+  padding: 20px;
+  font-size: unset;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+
+.options > button:active {
+  background: rebeccapurple;
+  color: lavender;
+}
+
+.correct {
+  color: chartreuse;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.incorrect {
+  color: hotpink;
+  font-size: 3rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 520px) {
+  .random-number {
+    font-size: 3rem;
+  }
+
+  .options {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .correct,
+  .incorrect {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .container {
+    width: 50%;
+  }
+}

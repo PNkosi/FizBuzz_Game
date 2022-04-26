@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Style sheet -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>FizzBuzz</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1 class="logo">Fizz<span>Buzz</span><span id="game">Game</span></h1>
+        <div class="navbar">
+          <a href="index.html" class="game-btn">Home</a>
+        </div>
+      </header>
+
+      <div class="rules">
+        <div class="rules-nav">
+          <h2>How to play</h2>
+          <button class="how-to-btn"></button>
+        </div>
+
+        <div class="rules-list toggle-rules">
+          <p>Press Fizz if number is divisible by 3</p>
+          <p>Press Buzz if number is divisible by 5</p>
+          <p>Press FizzBuzz if number is divisible by 3 and 5</p>
+          <p>if number not divisible by 3 or 5, press number</p>
+        </div>
+      </div>
+
+      <div class="display-area">
+        <div class="current">
+          <select>
+            <option value="" selected disabled>Choose difficulty</option>
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+          </select>
+          <div>
+            <h1 class="random-number"></h1>
+            <h2 class="display-result"></h2>
+          </div>
+        </div>
+        <div class="previous-box">
+          <p class="prev-number"></p>
+          <p class="prev-answer"></p>
+          <p class="prev-result"></p>
+        </div>
+      </div>
+
+      <div class="options">
+        <button class="opt-btn">Fizz</button>
+        <button class="opt-btn">Buzz</button>
+        <button class="opt-btn">FizzBuzz</button>
+        <button class="opt-btn" id="random-number"></button>
+      </div>
+    </div>
+
+    <footer>
+      <p>FizzBuzz Game</p>
+      <p>
+        Develop with ❤️ by <a href="https:www.perfect.co.za">Perfect Nkosi</a>
+      </p>
+    </footer>
+
+    <script src="fizzbuzzgame.js"></script>
+  </body>
+</html>

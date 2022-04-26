@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Style sheet -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>FizzBuzz</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1 class="logo">Fizz<span>Buzz</span></h1>
+        <div class="navbar">
+          <a href="fizzbuzzgame.html" class="game-btn">Play Game</a>
+        </div>
+      </header>
+
+      <!-- <section>
+        <ul>
+          <li>
+            If the number is divisble by 3 it will print
+            <span class="fizz">FIZZ</span>
+          </li>
+          <li>
+            if a number is divisible by 5 it will print
+            <span class="buzz">BUZZ</span>
+          </li>
+          <li>
+            If a number is divisible by both 3 and 5 it will print
+            <span class="fizzbuzz">FIZZBUZZ</span>
+          </li>
+          <li>
+            If the number is neither divisible by both 3 nor 5, it will print
+            the number>
+          </li>
+        </ul>
+      </section> -->
+
+      <main>
+        <div class="input-field-area">
+          <input
+            type="text"
+            id="start-number"
+            required
+            placeholder="Start number"
+          />
+
+          <input
+            type="text"
+            id="end-number"
+            required
+            placeholder="End number"
+          />
+        </div>
+        <button class="fizzBuzz-btn">Fizz Buzz</button>
+
+        <div class="results-area"></div>
+      </main>
+    </div>
+
+    <footer>
+      <p>FizzBuzz Game</p>
+      <p>
+        Develop with ❤️ by <a href="https:www.perfect.co.za">Perfect Nkosi</a>
+      </p>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
